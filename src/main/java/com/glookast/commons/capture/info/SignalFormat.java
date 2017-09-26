@@ -22,17 +22,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SignalFormat">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="frameRate" type="{http://base.commons.glookast.com}Rational"/>
- *         &lt;element name="picture" type="{http://capture-info.commons.glookast.com}PictureFormat"/>
- *         &lt;element name="sound" type="{http://capture-info.commons.glookast.com}SoundFormat"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="SignalFormat"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="frameRate" type="{http://base.commons.glookast.com}Rational"/&gt;
+ *         &lt;element name="picture" type="{http://capture-info.commons.glookast.com}PictureFormat"/&gt;
+ *         &lt;element name="sound" type="{http://capture-info.commons.glookast.com}SoundFormat"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

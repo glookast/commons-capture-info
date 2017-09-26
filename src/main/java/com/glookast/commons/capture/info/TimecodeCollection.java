@@ -24,18 +24,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TimecodeCollection">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="ltc" type="{http://timecode.commons.glookast.com}Timecode"/>
- *         &lt;element name="vitc" type="{http://timecode.commons.glookast.com}Timecode"/>
- *         &lt;element name="tod" type="{http://timecode.commons.glookast.com}Timecode"/>
- *         &lt;element name="rs422" type="{http://timecode.commons.glookast.com}Timecode"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="TimecodeCollection"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="ltc" type="{http://timecode.commons.glookast.com}Timecode"/&gt;
+ *         &lt;element name="vitc" type="{http://timecode.commons.glookast.com}Timecode"/&gt;
+ *         &lt;element name="tod" type="{http://timecode.commons.glookast.com}Timecode"/&gt;
+ *         &lt;element name="rs422" type="{http://timecode.commons.glookast.com}Timecode"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

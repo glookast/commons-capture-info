@@ -16,19 +16,19 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for TransferJobStatus.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="TransferJobStatus">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="STARTING"/>
- *     &lt;enumeration value="RUNNING"/>
- *     &lt;enumeration value="PAUSED"/>
- *     &lt;enumeration value="FAILED"/>
- *     &lt;enumeration value="ABORTED"/>
- *     &lt;enumeration value="FINISHED"/>
- *     &lt;enumeration value="IDLE"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="TransferJobStatus"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="STARTING"/&gt;
+ *     &lt;enumeration value="RUNNING"/&gt;
+ *     &lt;enumeration value="PAUSED"/&gt;
+ *     &lt;enumeration value="FAILED"/&gt;
+ *     &lt;enumeration value="ABORTED"/&gt;
+ *     &lt;enumeration value="FINISHED"/&gt;
+ *     &lt;enumeration value="IDLE"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

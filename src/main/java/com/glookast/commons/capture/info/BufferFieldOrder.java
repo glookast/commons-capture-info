@@ -16,17 +16,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for BufferFieldOrder.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="BufferFieldOrder">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="UNKNOWN"/>
- *     &lt;enumeration value="LOWER_FIELD_FIRST"/>
- *     &lt;enumeration value="UPPER_FIELD_FIRST"/>
- *     &lt;enumeration value="PROGRESSIVE_FRAME"/>
- *     &lt;enumeration value="PROGRESSIVE_SEGMENTED_FRAME"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="BufferFieldOrder"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="UNKNOWN"/&gt;
+ *     &lt;enumeration value="LOWER_FIELD_FIRST"/&gt;
+ *     &lt;enumeration value="UPPER_FIELD_FIRST"/&gt;
+ *     &lt;enumeration value="PROGRESSIVE_FRAME"/&gt;
+ *     &lt;enumeration value="PROGRESSIVE_SEGMENTED_FRAME"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

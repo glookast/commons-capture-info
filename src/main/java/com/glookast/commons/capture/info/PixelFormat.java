@@ -17,16 +17,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for PixelFormat.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="PixelFormat">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="UNKNOWN"/>
- *     &lt;enumeration value="UYVY"/>
- *     &lt;enumeration value="V210"/>
- *     &lt;enumeration value="RGB24"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="PixelFormat"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="UNKNOWN"/&gt;
+ *     &lt;enumeration value="UYVY"/&gt;
+ *     &lt;enumeration value="V210"/&gt;
+ *     &lt;enumeration value="RGB24"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

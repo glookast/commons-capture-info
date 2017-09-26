@@ -22,19 +22,19 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PictureFormat">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="width" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="height" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="pixelFormat" type="{http://capture-info.commons.glookast.com}PixelFormat"/>
- *         &lt;element name="bufferFieldOrder" type="{http://capture-info.commons.glookast.com}BufferFieldOrder"/>
- *         &lt;element name="aspectRatio" type="{http://base.commons.glookast.com}Rational"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="PictureFormat"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="width" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="height" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="pixelFormat" type="{http://capture-info.commons.glookast.com}PixelFormat"/&gt;
+ *         &lt;element name="bufferFieldOrder" type="{http://capture-info.commons.glookast.com}BufferFieldOrder"/&gt;
+ *         &lt;element name="aspectRatio" type="{http://base.commons.glookast.com}Rational"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
