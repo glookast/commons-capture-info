@@ -3,20 +3,18 @@ package com.glookast.commons.capture_info;
 
 import com.glookast.commons.xml.XmlAdapterUUID;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.io.Serializable;
+import java.util.Objects;
 import java.util.UUID;
 
 
 /**
  * <p>Java class for TransferJob complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="TransferJob"&gt;
  *   &lt;complexContent&gt;
@@ -34,8 +32,6 @@ import java.util.UUID;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TransferJob", namespace = "http://capture-info.commons.glookast.com", propOrder = {
@@ -47,13 +43,15 @@ import java.util.UUID;
     "transformProfileId",
     "outputSystemId"
 })
-public class TransferJob {
+public class TransferJob implements Serializable
+{
 
     @XmlElement(required = true)
     protected String id;
     @XmlElement(required = true)
     protected String captureJobId;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected TransferJobStatus status;
     protected double progress;
     protected String message;
@@ -64,7 +62,18 @@ public class TransferJob {
     @XmlJavaTypeAdapter(XmlAdapterUUID.class)
     protected UUID outputSystemId;
 
-    public TransferJob(String id, String captureJobId, TransferJobStatus status, double progress, String message, UUID transformProfileId, UUID outputSystemId)
+    /**
+     * Default no-arg constructor
+     */
+    public TransferJob()
+    {
+        super();
+    }
+
+    /**
+     * Fully-initialising value constructor
+     */
+    public TransferJob(final String id, final String captureJobId, final TransferJobStatus status, final double progress, final String message, final UUID transformProfileId, final UUID outputSystemId)
     {
         this.id = id;
         this.captureJobId = captureJobId;
@@ -73,10 +82,6 @@ public class TransferJob {
         this.message = message;
         this.transformProfileId = transformProfileId;
         this.outputSystemId = outputSystemId;
-    }
-
-    public TransferJob()
-    {
     }
 
     public TransferJob(TransferJob transferJob)
@@ -94,133 +99,149 @@ public class TransferJob {
     /**
      * Gets the value of the id property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getId() {
+    public String getId()
+    {
         return id;
     }
 
     /**
      * Sets the value of the id property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setId(String value) {
+    public void setId(String value)
+    {
         this.id = value;
     }
 
     /**
      * Gets the value of the captureJobId property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getCaptureJobId() {
+    public String getCaptureJobId()
+    {
         return captureJobId;
     }
 
     /**
      * Sets the value of the captureJobId property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setCaptureJobId(String value) {
+    public void setCaptureJobId(String value)
+    {
         this.captureJobId = value;
     }
 
     /**
      * Gets the value of the status property.
      *
-     * @return
-     *     possible object is
-     *     {@link TransferJobStatus }
-     *
+     * @return possible object is
+     * {@link TransferJobStatus }
      */
-    public TransferJobStatus getStatus() {
+    public TransferJobStatus getStatus()
+    {
         return status;
     }
 
     /**
      * Sets the value of the status property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link TransferJobStatus }
-     *
+     * @param value allowed object is
+     *              {@link TransferJobStatus }
      */
-    public void setStatus(TransferJobStatus value) {
+    public void setStatus(TransferJobStatus value)
+    {
         this.status = value;
     }
 
     /**
      * Gets the value of the progress property.
-     *
      */
-    public double getProgress() {
+    public double getProgress()
+    {
         return progress;
     }
 
     /**
      * Sets the value of the progress property.
-     *
      */
-    public void setProgress(double value) {
+    public void setProgress(double value)
+    {
         this.progress = value;
     }
 
     /**
      * Gets the value of the message property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getMessage() {
+    public String getMessage()
+    {
         return message;
     }
 
     /**
      * Sets the value of the message property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setMessage(String value) {
+    public void setMessage(String value)
+    {
         this.message = value;
     }
 
+    /**
+     * Gets the value of the transformProfileId property.
+     *
+     * @return possible object is
+     * {@link String }
+     */
     public UUID getTransformProfileId()
     {
         return transformProfileId;
     }
 
-    public void setTransformProfileId(UUID transformProfileId)
+    /**
+     * Sets the value of the transformProfileId property.
+     *
+     * @param value allowed object is
+     *              {@link String }
+     */
+    public void setTransformProfileId(UUID value)
     {
-        this.transformProfileId = transformProfileId;
+        this.transformProfileId = value;
     }
 
+    /**
+     * Gets the value of the outputSystemId property.
+     *
+     * @return possible object is
+     * {@link String }
+     */
     public UUID getOutputSystemId()
     {
         return outputSystemId;
     }
 
-    public void setOutputSystemId(UUID outputSystemId)
+    /**
+     * Sets the value of the outputSystemId property.
+     *
+     * @param value allowed object is
+     *              {@link String }
+     */
+    public void setOutputSystemId(UUID value)
     {
-        this.outputSystemId = outputSystemId;
+        this.outputSystemId = value;
     }
 
     @Override
@@ -232,6 +253,34 @@ public class TransferJob {
                ", status=" + status +
                ", progress=" + progress +
                ", message='" + message + '\'' +
+               ", transformProfileId=" + transformProfileId +
+               ", outputSystemId=" + outputSystemId +
                '}';
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TransferJob that = (TransferJob) o;
+        return Double.compare(that.progress, progress) == 0 &&
+               Objects.equals(id, that.id) &&
+               Objects.equals(captureJobId, that.captureJobId) &&
+               status == that.status &&
+               Objects.equals(message, that.message) &&
+               Objects.equals(transformProfileId, that.transformProfileId) &&
+               Objects.equals(outputSystemId, that.outputSystemId);
+    }
+
+    @Override
+    public int hashCode()
+    {
+
+        return Objects.hash(id, captureJobId, status, progress, message, transformProfileId, outputSystemId);
     }
 }

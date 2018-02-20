@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for TransferJobStatus.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
  *
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
  * <pre>
  * &lt;simpleType name="TransferJobStatus"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
@@ -23,11 +23,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
  * </pre>
- * 
  */
-@XmlType(name = "TransferJobStatus")
+@XmlType(name = "TransferJobStatus", namespace = "http://capture-info.commons.glookast.com")
 @XmlEnum
-public enum TransferJobStatus {
+public enum TransferJobStatus
+{
 
     STARTING,
     RUNNING,
@@ -37,11 +37,13 @@ public enum TransferJobStatus {
     FINISHED,
     IDLE;
 
-    public String value() {
+    public String value()
+    {
         return name();
     }
 
-    public static TransferJobStatus fromValue(String v) {
+    public static TransferJobStatus fromValue(String v)
+    {
         return valueOf(v);
     }
 

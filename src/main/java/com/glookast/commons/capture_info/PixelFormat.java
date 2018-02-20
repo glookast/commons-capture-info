@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for PixelFormat.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
  *
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
  * <pre>
  * &lt;simpleType name="PixelFormat"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
@@ -21,11 +21,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
  * </pre>
- * 
  */
-@XmlType(name = "PixelFormat")
+@XmlType(name = "PixelFormat", namespace = "http://capture-info.commons.glookast.com")
 @XmlEnum
-public enum PixelFormat {
+public enum PixelFormat
+{
 
     UNKNOWN("UNKNOWN"),
     UYVY("UYVY"),
@@ -35,16 +35,19 @@ public enum PixelFormat {
     RGB_24("RGB24");
     private final String value;
 
-    PixelFormat(String v) {
+    PixelFormat(String v)
+    {
         value = v;
     }
 
-    public String value() {
+    public String value()
+    {
         return value;
     }
 
-    public static PixelFormat fromValue(String v) {
-        for (PixelFormat c: PixelFormat.values()) {
+    public static PixelFormat fromValue(String v)
+    {
+        for (PixelFormat c : PixelFormat.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
