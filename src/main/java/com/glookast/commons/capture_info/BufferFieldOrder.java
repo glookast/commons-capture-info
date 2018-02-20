@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for BufferFieldOrder.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -21,11 +21,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
  * </pre>
- * 
  */
-@XmlType(name = "BufferFieldOrder")
+@XmlType(name = "BufferFieldOrder", namespace = "http://capture-info.commons.glookast.com")
 @XmlEnum
-public enum BufferFieldOrder {
+public enum BufferFieldOrder
+{
 
     UNKNOWN,
     LOWER_FIELD_FIRST,
@@ -33,11 +33,13 @@ public enum BufferFieldOrder {
     PROGRESSIVE_FRAME,
     PROGRESSIVE_SEGMENTED_FRAME;
 
-    public String value() {
+    public String value()
+    {
         return name();
     }
 
-    public static BufferFieldOrder fromValue(String v) {
+    public static BufferFieldOrder fromValue(String v)
+    {
         return valueOf(v);
     }
 

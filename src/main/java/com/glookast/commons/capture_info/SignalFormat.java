@@ -1,17 +1,20 @@
 
 package com.glookast.commons.capture_info;
 
+import com.glookast.commons.base.Rational;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-import com.glookast.commons.base.Rational;
+import java.io.Serializable;
+import java.util.Objects;
 
 
 /**
  * <p>Java class for SignalFormat complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="SignalFormat"&gt;
  *   &lt;complexContent&gt;
@@ -25,16 +28,15 @@ import com.glookast.commons.base.Rational;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignalFormat", propOrder = {
+@XmlType(name = "SignalFormat", namespace = "http://capture-info.commons.glookast.com", propOrder = {
     "frameRate",
     "picture",
     "sound"
 })
-public class SignalFormat {
+public class SignalFormat implements Serializable
+{
 
     protected Rational frameRate;
     protected PictureFormat picture;
@@ -42,17 +44,17 @@ public class SignalFormat {
 
     /**
      * Default no-arg constructor
-     * 
      */
-    public SignalFormat() {
+    public SignalFormat()
+    {
         super();
     }
 
     /**
      * Fully-initialising value constructor
-     * 
      */
-    public SignalFormat(final Rational frameRate, final PictureFormat picture, final SoundFormat sound) {
+    public SignalFormat(final Rational frameRate, final PictureFormat picture, final SoundFormat sound)
+    {
         this.frameRate = frameRate;
         this.picture = picture;
         this.sound = sound;
@@ -60,73 +62,67 @@ public class SignalFormat {
 
     /**
      * Gets the value of the frameRate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Rational }
-     *     
+     *
+     * @return possible object is
+     * {@link Rational }
      */
-    public Rational getFrameRate() {
+    public Rational getFrameRate()
+    {
         return frameRate;
     }
 
     /**
      * Sets the value of the frameRate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Rational }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Rational }
      */
-    public void setFrameRate(Rational value) {
+    public void setFrameRate(Rational value)
+    {
         this.frameRate = value;
     }
 
     /**
      * Gets the value of the picture property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PictureFormat }
-     *     
+     *
+     * @return possible object is
+     * {@link PictureFormat }
      */
-    public PictureFormat getPicture() {
+    public PictureFormat getPicture()
+    {
         return picture;
     }
 
     /**
      * Sets the value of the picture property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PictureFormat }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PictureFormat }
      */
-    public void setPicture(PictureFormat value) {
+    public void setPicture(PictureFormat value)
+    {
         this.picture = value;
     }
 
     /**
      * Gets the value of the sound property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SoundFormat }
-     *     
+     *
+     * @return possible object is
+     * {@link SoundFormat }
      */
-    public SoundFormat getSound() {
+    public SoundFormat getSound()
+    {
         return sound;
     }
 
     /**
      * Sets the value of the sound property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SoundFormat }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SoundFormat }
      */
-    public void setSound(SoundFormat value) {
+    public void setSound(SoundFormat value)
+    {
         this.sound = value;
     }
 
@@ -138,5 +134,27 @@ public class SignalFormat {
                ", picture=" + picture +
                ", sound=" + sound +
                '}';
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        SignalFormat that = (SignalFormat) o;
+        return Objects.equals(frameRate, that.frameRate) &&
+               Objects.equals(picture, that.picture) &&
+               Objects.equals(sound, that.sound);
+    }
+
+    @Override
+    public int hashCode()
+    {
+
+        return Objects.hash(frameRate, picture, sound);
     }
 }

@@ -1,19 +1,18 @@
 
 package com.glookast.commons.capture_info;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import com.glookast.commons.base.Rational;
+
+import javax.xml.bind.annotation.*;
+import java.io.Serializable;
+import java.util.Objects;
 
 
 /**
  * <p>Java class for PictureFormat complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="PictureFormat"&gt;
  *   &lt;complexContent&gt;
@@ -29,18 +28,17 @@ import com.glookast.commons.base.Rational;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PictureFormat", propOrder = {
+@XmlType(name = "PictureFormat", namespace = "http://capture-info.commons.glookast.com", propOrder = {
     "width",
     "height",
     "pixelFormat",
     "bufferFieldOrder",
     "aspectRatio"
 })
-public class PictureFormat {
+public class PictureFormat implements Serializable
+{
 
     protected int width;
     protected int height;
@@ -55,17 +53,17 @@ public class PictureFormat {
 
     /**
      * Default no-arg constructor
-     * 
      */
-    public PictureFormat() {
+    public PictureFormat()
+    {
         super();
     }
 
     /**
      * Fully-initialising value constructor
-     * 
      */
-    public PictureFormat(final int width, final int height, final PixelFormat pixelFormat, final BufferFieldOrder bufferFieldOrder, final Rational aspectRatio) {
+    public PictureFormat(final int width, final int height, final PixelFormat pixelFormat, final BufferFieldOrder bufferFieldOrder, final Rational aspectRatio)
+    {
         this.width = width;
         this.height = height;
         this.pixelFormat = pixelFormat;
@@ -75,105 +73,99 @@ public class PictureFormat {
 
     /**
      * Gets the value of the width property.
-     * 
      */
-    public int getWidth() {
+    public int getWidth()
+    {
         return width;
     }
 
     /**
      * Sets the value of the width property.
-     * 
      */
-    public void setWidth(int value) {
+    public void setWidth(int value)
+    {
         this.width = value;
     }
 
     /**
      * Gets the value of the height property.
-     * 
      */
-    public int getHeight() {
+    public int getHeight()
+    {
         return height;
     }
 
     /**
      * Sets the value of the height property.
-     * 
      */
-    public void setHeight(int value) {
+    public void setHeight(int value)
+    {
         this.height = value;
     }
 
     /**
      * Gets the value of the pixelFormat property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PixelFormat }
-     *     
+     *
+     * @return possible object is
+     * {@link PixelFormat }
      */
-    public PixelFormat getPixelFormat() {
+    public PixelFormat getPixelFormat()
+    {
         return pixelFormat;
     }
 
     /**
      * Sets the value of the pixelFormat property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PixelFormat }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PixelFormat }
      */
-    public void setPixelFormat(PixelFormat value) {
+    public void setPixelFormat(PixelFormat value)
+    {
         this.pixelFormat = value;
     }
 
     /**
      * Gets the value of the bufferFieldOrder property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BufferFieldOrder }
-     *     
+     *
+     * @return possible object is
+     * {@link BufferFieldOrder }
      */
-    public BufferFieldOrder getBufferFieldOrder() {
+    public BufferFieldOrder getBufferFieldOrder()
+    {
         return bufferFieldOrder;
     }
 
     /**
      * Sets the value of the bufferFieldOrder property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BufferFieldOrder }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BufferFieldOrder }
      */
-    public void setBufferFieldOrder(BufferFieldOrder value) {
+    public void setBufferFieldOrder(BufferFieldOrder value)
+    {
         this.bufferFieldOrder = value;
     }
 
     /**
      * Gets the value of the aspectRatio property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Rational }
-     *     
+     *
+     * @return possible object is
+     * {@link Rational }
      */
-    public Rational getAspectRatio() {
+    public Rational getAspectRatio()
+    {
         return aspectRatio;
     }
 
     /**
      * Sets the value of the aspectRatio property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Rational }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Rational }
      */
-    public void setAspectRatio(Rational value) {
+    public void setAspectRatio(Rational value)
+    {
         this.aspectRatio = value;
     }
 
@@ -187,5 +179,29 @@ public class PictureFormat {
                ", bufferFieldOrder=" + bufferFieldOrder +
                ", aspectRatio=" + aspectRatio +
                '}';
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        PictureFormat that = (PictureFormat) o;
+        return width == that.width &&
+               height == that.height &&
+               pixelFormat == that.pixelFormat &&
+               bufferFieldOrder == that.bufferFieldOrder &&
+               Objects.equals(aspectRatio, that.aspectRatio);
+    }
+
+    @Override
+    public int hashCode()
+    {
+
+        return Objects.hash(width, height, pixelFormat, bufferFieldOrder, aspectRatio);
     }
 }

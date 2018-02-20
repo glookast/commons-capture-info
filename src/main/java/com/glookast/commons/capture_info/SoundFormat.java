@@ -1,6 +1,8 @@
 
 package com.glookast.commons.capture_info;
 
+import java.io.Serializable;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -28,12 +30,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SoundFormat", propOrder = {
+@XmlType(name = "SoundFormat", namespace = "http://capture-info.commons.glookast.com", propOrder = {
     "channelCount",
     "sampleSize",
     "samplingRate"
 })
-public class SoundFormat {
+public class SoundFormat implements Serializable
+{
 
     protected int channelCount;
     protected int sampleSize;
@@ -113,5 +116,27 @@ public class SoundFormat {
                ", sampleSize=" + sampleSize +
                ", samplingRate=" + samplingRate +
                '}';
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        SoundFormat that = (SoundFormat) o;
+        return channelCount == that.channelCount &&
+               sampleSize == that.sampleSize &&
+               samplingRate == that.samplingRate;
+    }
+
+    @Override
+    public int hashCode()
+    {
+
+        return Objects.hash(channelCount, sampleSize, samplingRate);
     }
 }

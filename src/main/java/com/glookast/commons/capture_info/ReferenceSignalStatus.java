@@ -6,12 +6,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SignalReferenceStatus.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Java class for ReferenceSignalStatus.
  *
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
  * <pre>
- * &lt;simpleType name="SignalReferenceStatus"&gt;
+ * &lt;simpleType name="ReferenceSignalStatus"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
  *     &lt;enumeration value="NO_REFERENCE"/&gt;
  *     &lt;enumeration value="WRONG_REFERENCE"/&gt;
@@ -21,11 +21,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
  * </pre>
- * 
  */
-@XmlType(name = "SignalReferenceStatus")
+@XmlType(name = "ReferenceSignalStatus", namespace = "http://capture-info.commons.glookast.com")
 @XmlEnum
-public enum SignalReferenceStatus {
+public enum ReferenceSignalStatus
+{
 
     NO_REFERENCE,
     WRONG_REFERENCE,
@@ -33,11 +33,13 @@ public enum SignalReferenceStatus {
     REFERENCE_OK,
     REFERENCE_UNKNOWN;
 
-    public String value() {
+    public String value()
+    {
         return name();
     }
 
-    public static SignalReferenceStatus fromValue(String v) {
+    public static ReferenceSignalStatus fromValue(String v)
+    {
         return valueOf(v);
     }
 
