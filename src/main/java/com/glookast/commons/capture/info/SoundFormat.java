@@ -1,5 +1,5 @@
 
-package com.glookast.commons.capture_info;
+package com.glookast.commons.capture.info;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SoundFormat", namespace = "http://capture-info.commons.glookast.com", propOrder = {
+@XmlType(name = "SoundFormat", namespace = "http://info.capture.commons.glookast.com", propOrder = {
     "channelCount",
     "sampleSize",
     "samplingRate"

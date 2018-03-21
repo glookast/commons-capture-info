@@ -1,5 +1,5 @@
 
-package com.glookast.commons.capture_info;
+package com.glookast.commons.capture.info;
 
 import com.glookast.commons.base.Rational;
 
@@ -21,8 +21,8 @@ import java.util.Objects;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="frameRate" type="{http://base.commons.glookast.com}Rational" minOccurs="0"/&gt;
- *         &lt;element name="picture" type="{http://capture-info.commons.glookast.com}PictureFormat" minOccurs="0"/&gt;
- *         &lt;element name="sound" type="{http://capture-info.commons.glookast.com}SoundFormat" minOccurs="0"/&gt;
+ *         &lt;element name="picture" type="{http://info.capture.commons.glookast.com}PictureFormat" minOccurs="0"/&gt;
+ *         &lt;element name="sound" type="{http://info.capture.commons.glookast.com}SoundFormat" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -30,7 +30,7 @@ import java.util.Objects;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignalFormat", namespace = "http://capture-info.commons.glookast.com", propOrder = {
+@XmlType(name = "SignalFormat", namespace = "http://info.capture.commons.glookast.com", propOrder = {
     "frameRate",
     "picture",
     "sound"

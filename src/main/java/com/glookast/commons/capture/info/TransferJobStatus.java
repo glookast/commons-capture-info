@@ -1,5 +1,5 @@
 
-package com.glookast.commons.capture_info;
+package com.glookast.commons.capture.info;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;/simpleType&gt;
  * </pre>
  */
-@XmlType(name = "TransferJobStatus", namespace = "http://capture-info.commons.glookast.com")
+@XmlType(name = "TransferJobStatus", namespace = "http://info.capture.commons.glookast.com")
 @XmlEnum
 public enum TransferJobStatus
 {
