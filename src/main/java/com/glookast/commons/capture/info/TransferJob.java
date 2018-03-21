@@ -1,5 +1,5 @@
 
-package com.glookast.commons.capture_info;
+package com.glookast.commons.capture.info;
 
 import com.glookast.commons.xml.XmlAdapterUUID;
 
@@ -22,7 +22,7 @@ import java.util.UUID;
  *       &lt;sequence&gt;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="captureJobId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="status" type="{http://capture-info.commons.glookast.com}TransferJobStatus"/&gt;
+ *         &lt;element name="status" type="{http://info.capture.commons.glookast.com}TransferJobStatus"/&gt;
  *         &lt;element name="progress" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
  *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="transformProfileId" type="{http://base.commons.glookast.com}UUID" minOccurs="0"/&gt;
@@ -34,7 +34,7 @@ import java.util.UUID;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TransferJob", namespace = "http://capture-info.commons.glookast.com", propOrder = {
+@XmlType(name = "TransferJob", namespace = "http://info.capture.commons.glookast.com", propOrder = {
     "id",
     "captureJobId",
     "status",

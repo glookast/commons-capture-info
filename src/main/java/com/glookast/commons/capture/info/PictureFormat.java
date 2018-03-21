@@ -1,5 +1,5 @@
 
-package com.glookast.commons.capture_info;
+package com.glookast.commons.capture.info;
 
 import com.glookast.commons.base.Rational;
 
@@ -20,8 +20,8 @@ import java.util.Objects;
  *       &lt;sequence&gt;
  *         &lt;element name="width" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="height" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="pixelFormat" type="{http://capture-info.commons.glookast.com}PixelFormat"/&gt;
- *         &lt;element name="bufferFieldOrder" type="{http://capture-info.commons.glookast.com}BufferFieldOrder"/&gt;
+ *         &lt;element name="pixelFormat" type="{http://info.capture.commons.glookast.com}PixelFormat"/&gt;
+ *         &lt;element name="bufferFieldOrder" type="{http://info.capture.commons.glookast.com}BufferFieldOrder"/&gt;
  *         &lt;element name="aspectRatio" type="{http://base.commons.glookast.com}Rational"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -30,7 +30,7 @@ import java.util.Objects;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PictureFormat", namespace = "http://capture-info.commons.glookast.com", propOrder = {
+@XmlType(name = "PictureFormat", namespace = "http://info.capture.commons.glookast.com", propOrder = {
     "width",
     "height",
     "pixelFormat",
