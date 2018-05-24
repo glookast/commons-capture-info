@@ -3,10 +3,18 @@ apply plugin: "maven"
 apply plugin: "signing"
 
 group = "com.glookast.commons"
-version = "1.1.0"
+version = "1.1.1-SNAPSHOT"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
 
 jar {
     manifest {
@@ -16,11 +24,14 @@ jar {
 
 repositories {
     mavenCentral()
+    maven {
+        url = "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
 }
 
 dependencies {
-    compile "com.glookast.commons:commons-base:1.2.0"
-    compile "com.glookast.commons:commons-timecode:1.1.0"
+    compile "com.glookast.commons:commons-base:1.2.3-SNAPSHOT"
+    compile "com.glookast.commons:commons-timecode:1.1.1-SNAPSHOT"
     compile "com.glookast.commons:commons-xml:1.0.0"
 }
 

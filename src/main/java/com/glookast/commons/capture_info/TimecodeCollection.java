@@ -2,7 +2,7 @@
 package com.glookast.commons.capture_info;
 
 import com.glookast.commons.timecode.Timecode;
-import com.glookast.commons.timecode.XmlAdapterTimecode;
+import com.glookast.commons.timecode.xml.XmlAdapterTimecode;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
